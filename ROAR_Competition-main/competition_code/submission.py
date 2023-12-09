@@ -100,7 +100,7 @@ class RoarCompetitionSolution:
         throttle_control = 0.05 * (20 - vehicle_velocity_norm)
 
         control = {
-            "throttle": np.clip(throttle_control, 0.3, 1.0),
+            "throttle": np.clip(throttle_control, 0.0, 1.0),
             "steer": steer_control,
             "brake": np.clip(-throttle_control, 0.0, 1.0),
             "hand_brake": 0.0,
